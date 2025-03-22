@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeMaster - Professional Trading Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 50px;
+            background-color: #38a169;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #2f855a;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: #1a2a6c;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            .subtitle {
+                font-size: 1.1em;
+            }
+            .cta-button {
+                padding: 14px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <!-- Replace with your logo -->
+                <img src="https://firebasestorage.googleapis.com/v0/b/short4u-6d25f.appspot.com/o/icon%2Fshortu.png?alt=media&token=c743d912-9b5c-4e62-941d-347c2401e0dc" alt="TradeMaster Logo" style="max-width:100%; max-height:100%;">
+            </div>
+            <h1>TradeMaster Platform</h1>
+            <p class="subtitle">Empower Your Financial Future with Advanced Trading Tools</p>
+            <a href="https://www.youtube.com/@samratrajputcreation" class="cta-button" target="_blank">Start Trading Now</a>
+        </header>
+
+        <section class="features">
+            <div class="feature-card">
+                <h3>Real-Time Market Data</h3>
+                <p>Access live quotes, charts, and market analysis for stocks, forex, crypto, and commodities.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Advanced Trading Tools</h3>
+                <p>Utilize technical indicators, automated trading strategies, and risk management features.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Secure Transactions</h3>
+                <p>Trade with confidence using our encrypted platform and multi-layer security protocols.</p>
+            </div>
+            <div class="feature-card">
+                <h3>24/7 Support</h3>
+                <p>Get assistance from our expert team anytime with dedicated customer support.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 TradeMaster. All rights reserved. | Regulated by AKR International Developer Industy.</p>
+    </footer>
+</body>
+</html>

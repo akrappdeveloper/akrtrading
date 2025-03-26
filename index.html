@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TradeMaster - Professional Trading Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -16,6 +17,7 @@
             background-color: #f8f9fa;
             color: #2d3748;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
@@ -24,12 +26,57 @@
             padding: 0 20px;
         }
 
+        /* Navigation */
+        nav {
+            background: #1a2a6c;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5em;
+            color: white;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #38a169;
+        }
+
+        /* Header */
         .header {
             text-align: center;
-            padding: 80px 0;
+            padding: 100px 0;
             background: linear-gradient(135deg, #1a2a6c, #b21f1f);
             color: white;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .logo {
@@ -45,46 +92,16 @@
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             margin-bottom: 20px;
             font-weight: 700;
         }
 
         .subtitle {
-            font-size: 1.3em;
-            max-width: 600px;
+            font-size: 1.4em;
+            max-width: 700px;
             margin: 0 auto 40px;
             opacity: 0.9;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            padding: 60px 0;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-card h3 {
-            color: #1a2a6c;
-            margin-bottom: 15px;
-            font-size: 1.4em;
-        }
-
-        .feature-card p {
-            color: #666;
-            font-size: 1em;
         }
 
         .cta-button {
@@ -105,20 +122,155 @@
             transform: translateY(-2px);
         }
 
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 1em;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #1a2a6c;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            font-style: italic;
+        }
+
+        .testimonial-card p {
+            color: #555;
+        }
+
+        .testimonial-card .author {
+            margin-top: 15px;
+            font-weight: 600;
+            color: #1a2a6c;
+            font-style: normal;
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #1a2a6c;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+        }
+
+        .pricing-card h3 {
+            color: #1a2a6c;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card .price {
+            font-size: 2em;
+            color: #38a169;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card ul li {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
             background: #1a2a6c;
             color: white;
             font-size: 0.9em;
         }
 
+        footer a {
+            color: #38a169;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.2em;
+                font-size: 2.5em;
             }
             .subtitle {
-                font-size: 1.1em;
+                font-size: 1.2em;
+            }
+            .nav-links {
+                display: none; /* Add hamburger menu for mobile later */
             }
             .cta-button {
                 padding: 14px 40px;
@@ -127,39 +279,115 @@
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="nav-logo">TradeMaster</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
     <div class="container">
-        <header class="header">
+        <header class="header" id="home">
             <div class="logo">
-                <!-- Replace with your logo -->
                 <img src="https://firebasestorage.googleapis.com/v0/b/short4u-6d25f.appspot.com/o/icon%2Fshortu.png?alt=media&token=c743d912-9b5c-4e62-941d-347c2401e0dc" alt="TradeMaster Logo" style="max-width:100%; max-height:100%;">
             </div>
             <h1>TradeMaster Platform</h1>
-            <p class="subtitle">Empower Your Financial Future with Advanced Trading Tools</p>
+            <p class="subtitle">Empower Your Financial Future with Cutting-Edge Trading Tools</p>
             <a href="https://www.youtube.com/@samratrajputcreation" class="cta-button" target="_blank">Start Trading Now</a>
         </header>
 
-        <section class="features">
+        <!-- Features -->
+        <section class="features" id="features">
             <div class="feature-card">
                 <h3>Real-Time Market Data</h3>
-                <p>Access live quotes, charts, and market analysis for stocks, forex, crypto, and commodities.</p>
+                <p>Access live quotes, charts, and in-depth market analysis for stocks, forex, crypto, and commodities.</p>
             </div>
             <div class="feature-card">
                 <h3>Advanced Trading Tools</h3>
-                <p>Utilize technical indicators, automated trading strategies, and risk management features.</p>
+                <p>Leverage technical indicators, automated strategies, and robust risk management features.</p>
             </div>
             <div class="feature-card">
                 <h3>Secure Transactions</h3>
-                <p>Trade with confidence using our encrypted platform and multi-layer security protocols.</p>
+                <p>Trade confidently with our encrypted platform and multi-layer security protocols.</p>
             </div>
             <div class="feature-card">
-                <h3>24/7 Support</h3>
-                <p>Get assistance from our expert team anytime with dedicated customer support.</p>
+                <h3>24/7 Expert Support</h3>
+                <p>Our dedicated team is available around the clock to assist you with any queries.</p>
             </div>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2025 TradeMaster. All rights reserved. | Regulated by AKR International Developer Industy.</p>
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"TradeMaster has transformed my trading experience with its intuitive tools and real-time data."</p>
+                    <div class="author">- John D., Professional Trader</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The support team is exceptional, and the platform's security gives me peace of mind."</p>
+                    <div class="author">- Sarah K., Investor</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"A game-changer for anyone serious about trading. Highly recommend!"</p>
+                    <div class="author">- Michael R., Day Trader</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">$29/mo</div>
+                    <ul>
+                        <li>Real-Time Market Data</li>
+                        <li>Basic Trading Tools</li>
+                        <li>Email Support</li>
+                    </ul>
+                    <a href="#" class="cta-button">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Pro</h3>
+                    <div class="price">$99/mo</div>
+                    <ul>
+                        <li>All Basic Features</li>
+                        <li>Advanced Trading Tools</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <a href="#" class="cta-button">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Elite</h3>
+                    <div class="price">$199/mo</div>
+                    <ul>
+                        <li>All Pro Features</li>
+                        <li>Custom Strategies</li>
+                        <li>24/7 Dedicated Support</li>
+                    </ul>
+                    <a href="#" class="cta-button">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>© 2025 TradeMaster. All rights reserved. | Regulated by AKR International Developer Industry. | <a href="mailto:support@trademaster.com">Contact Us</a></p>
     </footer>
 </body>
 </html>

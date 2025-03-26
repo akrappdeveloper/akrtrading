@@ -154,9 +154,44 @@
             font-size: 1em;
         }
 
+        /* Why Choose Us */
+        .why-choose-us {
+            padding: 80px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .why-choose-us h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #1a2a6c;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .why-card {
+            padding: 20px;
+        }
+
+        .why-card i {
+            font-size: 2.5em;
+            color: #38a169;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            color: #1a2a6c;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
         /* Testimonials */
         .testimonials {
-            background: #fff;
+            background: #f8f9fa;
             padding: 80px 0;
             text-align: center;
         }
@@ -174,7 +209,7 @@
         }
 
         .testimonial-card {
-            background: #f8f9fa;
+            background: white;
             padding: 25px;
             border-radius: 10px;
             font-style: italic;
@@ -243,6 +278,139 @@
             color: #666;
         }
 
+        /* Newsletter */
+        .newsletter {
+            padding: 60px 0;
+            background: #1a2a6c;
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .newsletter form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 70%;
+            font-size: 1em;
+        }
+
+        .newsletter button {
+            padding: 12px 25px;
+            background: #38a169;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter button:hover {
+            background: #2f855a;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #1a2a6c;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            padding: 14px 40px;
+            background: #38a169;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #2f855a;
+        }
+
+        .contact-info {
+            padding: 20px;
+        }
+
+        .contact-info h3 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .map-placeholder {
+            height: 200px;
+            background: #ddd;
+            border-radius: 10px;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: #1a2a6c;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #38a169;
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -270,10 +438,20 @@
                 font-size: 1.2em;
             }
             .nav-links {
-                display: none; /* Add hamburger menu for mobile later */
+                display: none;
             }
             .cta-button {
                 padding: 14px 40px;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .newsletter form {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .newsletter input[type="email"] {
+                width: 100%;
             }
         }
     </style>
@@ -286,6 +464,7 @@
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#features">Features</a>
+                <a href="#why-us">Why Us</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#testimonials">Testimonials</a>
                 <a href="#contact">Contact</a>
@@ -324,6 +503,30 @@
             </div>
         </section>
     </div>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us" id="why-us">
+        <div class="container">
+            <h2>Why Choose TradeMaster?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Proven Performance</h3>
+                    <p>Backed by years of market expertise and cutting-edge technology.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Unmatched Security</h3>
+                    <p>Your funds and data are protected with industry-leading encryption.</p>
+                </div>
+                <div class="why-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Driven</h3>
+                    <p>Join a thriving community of traders and share insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Testimonials -->
     <section class="testimonials" id="testimonials">
@@ -385,8 +588,52 @@
         </div>
     </section>
 
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest market insights and updates.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:support@trademaster.com">support@trademaster.com</a></p>
+                    <p><i class="fas fa-phone"></i> Phone: +1 (800) 123-4567</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: 123 Trading St, Financial District, NY 10001</p>
+                    <div class="map-placeholder">Map Placeholder (Embed Google Maps Here)</div>
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <p>© 2025 TradeMaster. All rights reserved. | Regulated by AKR International Developer Industry. | <a href="mailto:support@trademaster.com">Contact Us</a></p>
     </footer>
 </body>
